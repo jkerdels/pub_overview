@@ -1,0 +1,106 @@
+\documentclass[8pt]{beamer}
+\usetheme{Pittsburgh}
+
+\usepackage[backend=biber,style=numeric,autocite=plain,sorting=none]{biblatex}
+
+\usepackage[utf8]{inputenc}
+
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usepackage{adjustbox}
+
+\usepackage{hyperref}
+
+\PassOptionsToPackage{svgnames,x11names,dvipsnames}{xcolor}
+\usepackage[most]{tcolorbox}
+
+\definecolor{softorange}{RGB}{255, 210, 82}
+\definecolor{softred}{RGB}{255, 190, 160}
+
+\newtcbox{\pdfbox}[1][]{enhanced,
+ box align=base,
+ nobeforeafter,
+ colback=softorange,
+ colframe=softorange,
+ size=small,
+ left=0pt,
+ right=0pt,
+ boxsep=1pt,
+ #1}
+
+\newtcbox{\bibbox}[1][]{enhanced,
+ box align=base,
+ nobeforeafter,
+ colback=softred,
+ colframe=softred,
+ size=small,
+ left=0pt,
+ right=0pt,
+ boxsep=1pt,
+ #1}
+
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+
+\setbeamertemplate{footline}[page number]{}
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
+\AtBeginBibliography{\scriptsize}
+
+\newcommand{\fc}[2]{
+	\small 
+	\cite{#1}~\fullcite{#1}~~~\pdfbox{\href{http://home.kerdels.de/#2.pdf}{{\scriptsize \bf PDF}}}~\bibbox{\href{http://home.kerdels.de/#2.bib}{{\scriptsize \bf bibtex}}}
+}
+
+\newcommand{\sof}[2]{{\footnotesize (#1/#2)}}
+
+\newcommand{\twocol}[4]{
+\begin{columns}[t]
+\begin{column}{#1\textwidth}
+#2
+\end{column}
+\begin{column}{#3\textwidth}
+#4
+\end{column}
+\end{columns}	
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{decentral_control_in_robot_teams/slide.bibinc}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\title{Publication Overview\\[0.5em]\small 2004 -- 2020}
+\author{Jochen Kerdels}
+\institute{
+	\texttt{Jochen@Kerdels.de}\\
+	\texttt{\url{https://github.com/jkerdels/pub_overview}}
+}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{decentral_control_in_robot_teams/slide.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}[allowframebreaks]{References}
+
+\printbibliography
+\end{frame}
+
+\end{document}
