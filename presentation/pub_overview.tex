@@ -11,6 +11,8 @@
 
 \usepackage{hyperref}
 
+\usepackage{ragged2e} %\justifying
+
 \PassOptionsToPackage{svgnames,x11names,dvipsnames}{xcolor}
 \usepackage[most]{tcolorbox}
 
@@ -51,7 +53,7 @@
 
 \newcommand{\fc}[2]{
 	\small 
-	\cite{#1}~\fullcite{#1}~~~\pdfbox{\href{http://home.kerdels.de/#2.pdf}{{\scriptsize \bf PDF}}}~\bibbox{\href{http://home.kerdels.de/#2.bib}{{\scriptsize \bf bibtex}}}
+	\cite{#1}~\fullcite{#1} \hspace{0.5em}\pdfbox{\href{http://home.kerdels.de/#2.pdf}{{\scriptsize \bf PDF}}}~\bibbox{\href{http://home.kerdels.de/#2.bib}{{\scriptsize \bf bibtex}}}
 }
 
 \newcommand{\sof}[2]{{\footnotesize (#1/#2)}}
@@ -59,10 +61,10 @@
 \newcommand{\twocol}[4]{
 \begin{columns}[t]
 \begin{column}{#1\textwidth}
-#2
+{#2}
 \end{column}
 \begin{column}{#3\textwidth}
-#4
+{#4}
 \end{column}
 \end{columns}	
 }
@@ -71,6 +73,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{decentral_control_in_robot_teams/slide.bibinc}
+\input{robocup/slide.bibinc}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -93,7 +96,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \input{decentral_control_in_robot_teams/slide.tex}
-
+\input{robocup/slide.tex}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
