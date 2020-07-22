@@ -18,8 +18,9 @@
 
 \definecolor{softorange}{RGB}{255, 210, 82}
 \definecolor{softred}{RGB}{255, 190, 160}
+\definecolor{softgreen}{RGB}{125, 240, 210}
 
-\newtcbox{\pdfbox}[1][]{enhanced,
+\newtcbox{\orangebox}[1][]{enhanced,
  box align=base,
  nobeforeafter,
  colback=softorange,
@@ -30,11 +31,22 @@
  boxsep=1pt,
  #1}
 
-\newtcbox{\bibbox}[1][]{enhanced,
+\newtcbox{\redbox}[1][]{enhanced,
  box align=base,
  nobeforeafter,
  colback=softred,
  colframe=softred,
+ size=small,
+ left=0pt,
+ right=0pt,
+ boxsep=1pt,
+ #1}
+
+\newtcbox{\greenbox}[1][]{enhanced,
+ box align=base,
+ nobeforeafter,
+ colback=softgreen,
+ colframe=softgreen,
  size=small,
  left=0pt,
  right=0pt,
@@ -52,8 +64,13 @@
 \AtBeginBibliography{\scriptsize}
 
 \newcommand{\fc}[2]{
-	\small 
-	\cite{#1}~\fullcite{#1} \hspace{0.5em}\pdfbox{\href{http://home.kerdels.de/#2.pdf}{{\scriptsize \bf PDF}}}~\bibbox{\href{http://home.kerdels.de/#2.bib}{{\scriptsize \bf bibtex}}}
+	\scriptsize 
+	\cite{#1}~\fullcite{#1} \hspace{0.5em}\orangebox{\href{http://home.kerdels.de/#2.pdf}{{\bf PDF}}}~\redbox{\href{http://home.kerdels.de/#2.bib}{{\bf bibtex}}}
+}
+
+\newcommand{\vid}[1]{
+    \scriptsize
+	\greenbox{\href{http://home.kerdels.de/#1}{{\bf video}}}
 }
 
 \newcommand{\sof}[2]{{\footnotesize (#1/#2)}}

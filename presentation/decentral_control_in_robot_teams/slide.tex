@@ -2,23 +2,39 @@
 
 \begin{frame}{Decentral Control in Robot Teams}
 
-{\justifying
+\vspace{1em}
+\justifying
 
+We developed a {\bf decentral scheduling algorithm} that allows multiple robots 
+to coordinate their behavior to achieve a common goal in a challenging, dynamic 
+environment where communication might be intermittent and the number of robots 
+might change without prior notice. 
+\vspace{1.5em}
 
-
-}
-
-\twocol{0.45}{
+\twocol{0.5}{
+Characteristics of our approach:
+\begin{itemize}
+	\item synchronization free
+	\item low-bandwidth broadcast communication
+	\item graceful degradation in case of
+	\begin{itemize}
+		\item communication outages
+		\item loss of team members
+	\end{itemize}
+	\item continuous replanning
+\end{itemize}
+}{0.43}{
+\vspace{-2.5em}
 \begin{figure}
-\includegraphics[width=\linewidth]{decentral_control_in_robot_teams/schematic.jpg}
+\includegraphics[width=0.9\linewidth]{decentral_control_in_robot_teams/schematic.jpg}
 
 \vspace{-1em}
-\caption{\scriptsize Figure from Ziegler et al.~\cite{Ziegler2004}.}
+\caption{\scriptsize Schematic of the proposed scheduler (from~\cite{Ziegler2004}).}
 \end{figure}
-}{0.5}{
-
-Foo
 }
+\vspace{1.25em}
+The scheduling algorithm was successfully used during the RoboCup 2004 
+competition winning the Standard Platform League Open Challenge.\vid{publications/2004-02/robocup04-gt_open_challenge.mp4}
 
 \begin{center}
 \rule{2cm}{0.4pt}\\[0.5em]
