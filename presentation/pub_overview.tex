@@ -18,7 +18,8 @@
 
 \definecolor{softorange}{RGB}{255, 210, 82}
 \definecolor{softred}{RGB}{255, 190, 160}
-\definecolor{softgreen}{RGB}{125, 240, 210}
+\definecolor{softgreen}{RGB}{125, 210, 240}
+\definecolor{linkblue}{RGB}{50, 75, 190}
 
 \newtcbox{\orangebox}[1][]{enhanced,
  box align=base,
@@ -68,10 +69,10 @@
 	\cite{#1}~\fullcite{#1} \hspace{0.5em}\orangebox{\href{http://home.kerdels.de/#2.pdf}{{\bf PDF}}}~\redbox{\href{http://home.kerdels.de/#2.bib}{{\bf bibtex}}}
 }
 
-\newcommand{\vid}[1]{
+\newcommand{\vid}[1]{{
     \scriptsize
 	\greenbox{\href{http://home.kerdels.de/#1}{{\bf video}}}
-}
+}}
 
 \newcommand{\sof}[2]{{\footnotesize (#1/#2)}}
 
@@ -85,6 +86,8 @@
 \end{column}
 \end{columns}	
 }
+
+\newcommand{\lnk}[2]{{\color{linkblue}\href{#1}{#2}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
