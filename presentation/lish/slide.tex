@@ -51,25 +51,40 @@ spaces.
 \begin{frame}{Local Input Space Histograms \sof{2}{3}}
 
 \twocol{0.4}{
-\vspace{-4em}
+\vspace{-3em}
 \begin{figure}
-\adjincludegraphics[width=1.\linewidth,valign=t]{lish/force-based.jpg}
-\vspace{-1.25em}
-\caption{\scriptsize Foo~\cite{Kerdels2015}.}
+\hspace{-1.5em}
+\adjincludegraphics[width=0.9\linewidth,valign=t]{lish/force-based.jpg}
+\vspace{-0.5em}
+\caption{\scriptsize Force-based graph drawing of an image clustering based on
+color performed by a LISH enhanced GNG~\cite{Kerdels2015}.}
 \adjincludegraphics[width=1.\linewidth,valign=b]{lish/hierarchical.jpg}
 \vspace{-1.5em}
-\caption{\scriptsize Bar~\cite{Kerdels2015}.}
+\caption{\scriptsize Hierarchical image clustering based on color performed by 
+a LISH enhanced GNG~\cite{Kerdels2015}.}
 \end{figure}
 }{0.55}{
 \justifying
-Foo
 
-\vspace{1em}
+\vspace{0.5em}
+In a follow up work~\cite{Kerdels2015} we investigate the utility of LISH 
+enhanced GNGs for {\bf analysing and clustering high-dimensional data}. Our 
+results demonstrate, that the additional information gained about the input 
+space structure can be used to enable and improve visualization and hierarchical
+clustering. 
+
+\vspace{1.5em}
+Furthermore, we show that contrary to common view the {\bf Minkowski distance 
+with \(p > 1\) can be a meaningful distance measure} for high-dimensional data.
+
+\vspace{1.5em}
 The analysis was featured on the title page of ``Informatik 
 Spektrum''~\cite{Kerdels2015c}, the main organ of the German Informatics 
 Society~(GI).
 
 }
+
+\vspace{-1em}
 
 \begin{center}
 \rule{2cm}{0.4pt}\\[0.5em]
@@ -83,14 +98,35 @@ Society~(GI).
 
 \begin{frame}{Local Input Space Histograms \sof{3}{3}}
 
-%\vspace{1em}
+\vspace{1.5em}
 \justifying
-Foo
+Further investigation of the LISH concept~\cite{Kerdels2016b} showed that 
+information gathered by the LISH can be utilized to form a {\bf relaxed one-hot 
+encoding} as the output of a GNG. Processing this output with a second stage GNG
+demonstrates that the encoding may serve as a meaningful {\bf sparse 
+representation of high-dimensional input spaces}.
+
+\vspace{-0.5em}
+\twocol{0.45}{
+\begin{figure}
+\adjincludegraphics[width=0.75\linewidth,valign=b]{lish/relaxedonehot.jpg}
+\caption{\scriptsize Example of a GNG~\(r\) that processed the relaxed one-hot 
+encoded output of a GNG~\(h\) that processed samples from the MNIST database of 
+handwritten digits. The shown prototypes reveal the sparse patterns resulting 
+from the relaxed one-hot encoding~\cite{Kerdels2016b}.}
+\end{figure}
+}{0.45}{
+\begin{figure}
+\adjincludegraphics[width=0.75\linewidth,valign=b]{lish/relaxedonehotvis.jpg}
+\caption{\scriptsize Prototypes of GNG~\(h\) superimposed on the network of 
+GNG~\(r\). The shown prototypes correspond to the entry with highest value in 
+the respective prototypes of GNG~\(r\)~\cite{Kerdels2016b}.}
+\end{figure}
+
+}
 
 
-\vspace{2em}
-
-
+\vspace{-1em}
 
 \begin{center}
 \rule{2cm}{0.4pt}\\[0.5em]
