@@ -23,6 +23,8 @@
 \definecolor{softgreen}{RGB}{125, 210, 240}
 \definecolor{linkblue}{RGB}{50, 75, 190}
 
+\definecolor{darkred}{RGB}{110, 5, 30}
+
 \newtcbox{\orangebox}[1][]{enhanced,
  box align=base,
  nobeforeafter,
@@ -96,8 +98,9 @@
 
 \newcommand{\lnk}[2]{{\color{linkblue}\href{#1}{#2}}}
 
-\newcommand{\bestpaper}{{\scriptsize \bf best paper award}}
-\newcommand{\nombestpaper}{{\scriptsize \bf nominated for best paper award}}
+\newcommand{\bestpaper}{{\color{darkred}\scriptsize \bf best paper award}}
+\newcommand{\nombestpaper}{{\color{darkred}\scriptsize \bf nominated for best paper award}}
+\newcommand{\cover}{{\color{darkred}\scriptsize \bf featured on ``Informatik Spektrum'' cover}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
