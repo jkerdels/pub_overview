@@ -3,7 +3,16 @@
 
 %\geometry{paperwidth=140mm,paperheight=105mm}
 
-\usepackage[backend=biber,style=numeric,autocite=plain,sorting=none,maxbibnames=99]{biblatex}
+\usepackage[
+  backend=biber,
+  style=numeric,
+  autocite=plain,
+  sorting=none,
+  maxbibnames=99,
+  isbn=false,
+  url=false,
+  doi=false
+]{biblatex}
 
 \usepackage[utf8]{inputenc}
 
@@ -105,19 +114,21 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\input{robocup/slide.bibinc}
-\input{decentral_control_in_robot_teams/slide.bibinc}
-\input{diploma_thesis/slide.bibinc}
-\input{cmanipulator/slide.bibinc}
-\input{uauv/slide.bibinc}
-\input{sensorless/slide.bibinc}
-\input{laser/slide.bibinc}
-\input{hovering/slide.bibinc}
-\input{exploratory_modeling/slide.bibinc}
-\input{lish/slide.bibinc}
-\input{diss/slide.bibinc}
-\input{postdiss/slide.bibinc}
-\input{side/slide.bibinc}
+\addbibresource{pub_overview.bib}
+
+% \input{robocup/slide.bibinc}
+% \input{decentral_control_in_robot_teams/slide.bibinc}
+% \input{diploma_thesis/slide.bibinc}
+% \input{cmanipulator/slide.bibinc}
+% \input{uauv/slide.bibinc}
+% \input{sensorless/slide.bibinc}
+% \input{laser/slide.bibinc}
+% \input{hovering/slide.bibinc}
+% \input{exploratory_modeling/slide.bibinc}
+% \input{lish/slide.bibinc}
+% \input{diss/slide.bibinc}
+% \input{postdiss/slide.bibinc}
+% \input{side/slide.bibinc}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
